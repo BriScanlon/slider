@@ -1,22 +1,21 @@
-import logo from './logo.svg';
+import React, { useState } from "react";
+import ControlSlider from './Components/ControlSlider';
+import DisplayPanel from './Components/ControlSlider/DisplayPanel';
 import './App.css';
 
 function App() {
+
+  const [sliderValue, setSliderValue] = useState(50);
+
+  const handleSliderChange = (value) => {
+    setSliderValue(value);
+  }
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h2>Slider Component Example</h2>
+        <ControlSlider name="Volume" min={0} max={100} normal={sliderValue} onChange={handleSliderChange}/>
+        <DisplayPanel name="Volume" value={sliderValue} />
       </header>
     </div>
   );
