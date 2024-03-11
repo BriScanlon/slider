@@ -17,7 +17,7 @@ function ControlSlider({ name, min, max, normal, onChange }) {
 
     return (
         <div>
-            <label htmlFor={name}>{name}: {value} </label>
+            <label htmlFor={name}>{name} </label>
             <input
                 type="range"
                 id={name}
