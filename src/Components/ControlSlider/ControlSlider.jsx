@@ -1,34 +1,29 @@
-import React, { useEffect, useState } from "react";
+// src/components/ControlSlider.js
+import React, { useState } from 'react';
 
-function ControlSlider({ name, min, max, normal, onChange }) {
-    // initialise the slider value to normal or the default value
-    const [value, setValue] = useState(normal);
+function ControlSlider({ name, min, max, normal, onUpdate }) {
+  const [value, setValue] = useState(normal);
 
-    // fucntion to update the value when the slider moves
-    const handleValueChange = (event) => {
-        const newValue = event.target.value;
-        setValue(newValue);
-        onChange(newValue);
-    }
+  const handleChange = (event) => {
+    const newValue = event.target.value;
+    setValue(newValue);
+    onUpdate(name, newValue); // Notify the parent component of the update
+  };
 
-    useEffect(() => {
-        setValue(normal);
-    }, [normal]);
-
-    return (
-        <div>
-            <label htmlFor={name}>{name} </label>
-            <input
-                type="range"
-                id={name}
-                name={name}
-                min={min}
-                max={max}
-                value={value}
-                onChange={handleValueChange}
-            />
-        </div>
-    )
+  return (
+    <div>
+      <label htmlFor={name}>{name}: {value}</label>
+      <input
+        type="range"
+        id={name}
+        name={name}
+        min={min}
+        max={max}
+        value={value}
+        onChange={handleChange}
+      />
+    </div>
+  );
 }
 
 export default ControlSlider;

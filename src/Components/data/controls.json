@@ -1,0 +1,27 @@
+[
+    {
+      "id": "control1",
+      "type": "slider",
+      "name": "Volume",
+      "min": 0,
+      "max": 100,
+      "normal": 37
+    },
+    {
+      "id": "control2",
+      "type": "slider",
+      "name": "Brightness",
+      "min": 0,
+      "max": 100,
+      "normal": 75
+    },
+    {
+      "id": "control3",
+      "type": "slider",
+      "name": "Left",
+      "min": 17,
+      "max": 100,
+      "normal": 52
+    }
+
+  ]
