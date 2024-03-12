@@ -1,6 +1,6 @@
 import React from "react";
 import './App.css';
-import ControlsContainer from "./Components/ControlsContainer/ControlsContainer";
+import ControlsContainer from "./Components/ControlsContainer";
 
 function App() {
 

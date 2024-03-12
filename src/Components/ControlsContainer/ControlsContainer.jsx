@@ -20,7 +20,6 @@ function ControlsContainer() {
         }));
     };
 
-
     return (
         <div>
             {controlsData.map(control => (
