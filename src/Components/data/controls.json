@@ -1,43 +1,54 @@
 [
-    {
-      "id": "control1",
-      "type": "slider",
-      "name": "Volume",
-      "min": 0,
-      "max": 100,
-      "normal": 37
-    },
-    {
-      "id": "control2",
-      "type": "slider",
-      "name": "Brightness",
-      "min": 0,
-      "max": 100,
-      "normal": 75
-    },
-    {
-      "id": "control3",
-      "type": "slider",
-      "name": "Left",
-      "min": 17,
-      "max": 100,
-      "normal": 52
-    },
-    {
-      "id": "control4",
-      "type": "slider",
-      "name": "Contrast",
-      "min": 1,
-      "max": 50,
-      "normal": 33
-    },
-    {
-      "id": "control5",
-      "type": "slider",
-      "name": "Rain",
-      "min": 0,
-      "max": 10000,
-      "normal": 10000
-    }
-
-  ]
+  {
+    "id": "control1",
+    "type": "slider",
+    "name": "Volume",
+    "min": 0,
+    "max": 100,
+    "normal": 37
+  },
+  {
+    "id": "control2",
+    "type": "slider",
+    "name": "Brightness",
+    "min": 0,
+    "max": 100,
+    "normal": 75
+  },
+  {
+    "id": "control3",
+    "type": "slider",
+    "name": "Contrast",
+    "min": 2314,
+    "max": 10000,
+    "normal": 3052
+  },
+  {
+    "id": "control4",
+    "type": "radio",
+    "name": "Radio Station selection",
+    "options": [
+      { "label": "Radio 1", "value": "radio1" },
+      { "label": "Radio 2", "value": "radio2" },
+      { "label": "Virgin Radio", "value": "virginRadio" }
+    ],
+    "defaultValue": "virginRadio"
+  },
+  {
+    "id": "control5",
+    "type": "select",
+    "name": "Favorite Genre",
+    "options": [
+      { "label": "Rock", "value": "rock" },
+      { "label": "Pop", "value": "pop" },
+      { "label": "Jazz", "value": "jazz" },
+      { "label": "Classical", "value": "classical" },
+      { "label": "Electronic", "value": "electronic" }
+    ],
+    "defaultValue": "pop",
+    "multiple": false,
+    "required": true,
+    "size": 1,
+    "autofocus": false
+  }
+]
