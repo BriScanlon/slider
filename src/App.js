@@ -36,15 +36,6 @@ function App() {
     }, {})
   );
 
-  /**
-   * Updates the value of a specific control based on its name. This function iterates through
-   * the array of controls, finds the control that matches the given name, and updates its value
-   * with the new value provided. The state is then updated with this new array of controls,
-   * ensuring that React re-renders any components relying on this state to reflect the change.
-   * 
-   * @param {string} name The name of the control to be updated. This matches the 'name' property of the control object.
-   * @param {number} newValue The new value to assign to the control. This should be a number, as it represents a value like volume or brightness.
-   */
   const handleUpdate = (name, newValue) => {
     setControlValues(prevValues => ({
       ...prevValues,
@@ -58,7 +49,7 @@ function App() {
         <h2>Slider Component Example</h2>
         <ControlsContainer controls={data} onUpdate={handleUpdate} />
         {data.map(control => (
-          <ControlDisplayPanel key={control.id} name={control.name} value={controlValues.value} />
+          <ControlDisplayPanel key={control.id} name={control.name} value={controlValues[control.name]} />
         ))}
       </header>
     </div>
