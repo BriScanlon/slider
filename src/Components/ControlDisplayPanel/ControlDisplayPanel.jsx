@@ -1,6 +1,6 @@
 import React from 'react';
 
-function DisplayPanel({ name, value }) {
+function ControlDisplayPanel({key, name, value }) {
     return (
         <div>
             <p>{name}: {value}</p>
@@ -8,4 +8,4 @@ function DisplayPanel({ name, value }) {
     )
 }
 
-export default DisplayPanel;
+export default ControlDisplayPanel;

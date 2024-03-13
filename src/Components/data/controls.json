@@ -28,16 +28,16 @@
       "type": "slider",
       "name": "Contrast",
       "min": 1,
-      "max": 100,
+      "max": 50,
       "normal": 33
     },
     {
       "id": "control5",
       "type": "slider",
       "name": "Rain",
-      "min": 1,
-      "max": 1000,
-      "normal": 700
+      "min": 0,
+      "max": 10000,
+      "normal": 10000
     }
 
   ]
